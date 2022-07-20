@@ -60,6 +60,13 @@ class GameWonFragment : Fragment() {
             menu.findItem(R.id.share)?.isVisible = false
         }
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.share -> shareSuccess()
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }
 
 
